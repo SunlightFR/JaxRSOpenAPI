@@ -28,17 +28,17 @@ import jakarta.ws.rs.core.Application;
 public class TestApplication extends Application {
 	
 
-    @Override
-    public Set<Class<?>> getClasses() {
-
-        final Set<Class<?>> clazzes = new HashSet<Class<?>>();
-
-        clazzes.add(OpenApiResource.class);
-        clazzes.add(PetResource.class);
-//        clazzes.add(AcceptHeaderOpenApiResource.class);
-         
-
-        return clazzes;
-    }
+//    @Override
+//    public Set<Class<?>> getClasses() {
+//
+//        final Set<Class<?>> clazzes = new HashSet<Class<?>>();
+//
+//        clazzes.add(OpenApiResource.class);
+//        clazzes.add(PetResource.class);
+////        clazzes.add(AcceptHeaderOpenApiResource.class);
+//
+//
+//        return clazzes;
+//    }
 
 }
