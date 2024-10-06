@@ -2,10 +2,11 @@ package fr.istic.taa.jaxrs.dto;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
-public class Game {
+public class Game implements Serializable {
     @Id
     @GeneratedValue
     private int id;
