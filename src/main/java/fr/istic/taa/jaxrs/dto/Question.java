@@ -5,8 +5,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
+import java.io.Serializable;
+
 @Entity
-public abstract class Question {
+public abstract class Question implements Serializable {
     @Id
     @GeneratedValue
     private int id;

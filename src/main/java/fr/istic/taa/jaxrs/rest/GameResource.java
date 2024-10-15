@@ -2,20 +2,25 @@ package fr.istic.taa.jaxrs.rest;
 
 import fr.istic.taa.jaxrs.dao.impl.GameDao;
 import fr.istic.taa.jaxrs.dto.Game;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.POST;
-import jakarta.ws.rs.Path;
+import jakarta.ws.rs.*;
 
 @Path("game")
+@Produces({"application/json"})
 public class GameResource {
+    private GameDao gameDao;
+
+    public GameResource() {
+        gameDao = new GameDao();
+    }
 
     @GET
-    public Game getGameById(Long id){
-        return new GameDao().findOne(id);
+    @Path("/{gameId}")
+    public Game getGameById(@PathParam("gameId") Long gameId){
+        return gameDao.findOne(gameId);
     }
 
     @POST
     public void doPost(Game game){
-        new GameDao().save(game);
+        gameDao.save(game);
     }
 }

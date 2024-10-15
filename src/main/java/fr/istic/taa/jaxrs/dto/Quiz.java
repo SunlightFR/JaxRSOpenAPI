@@ -2,10 +2,11 @@ package fr.istic.taa.jaxrs.dto;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
-public class Quiz {
+public class Quiz  implements Serializable {
     @Id
     @GeneratedValue
     private int id;
